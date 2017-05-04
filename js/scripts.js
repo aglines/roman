@@ -51,21 +51,37 @@ for (var j = 0; j <= (arabicArray.length - 1) ; j++ ) {
 
 
 var RomanHardcode = function(digit, column){
-  console.log("col ", column, "digit ", digit);
+  // console.log("col ", column, "digit ", digit);
   // change this line later
-  if (digit === "1") {
-    outputArray.push("I");
-    console.log(column, "out: ", outputArray);
-  }
-  if (digit === "5") {
-    outputArray.push("V");
-    console.log(column, "out: ", outputArray);
 
-  }
-  console.log(outputArray);
+  switch (column){
+    case ("ones"):
+      console.log("column ", column);
+      if (digit === "1") {
+        outputArray.push("I");
+      }
+      if (digit === "2") {
+        outputArray.push("II");
+      }
+      if (digit === "3") {
+        outputArray.push("III");
+      }
+      if (digit === "4") {
+        outputArray.push("IV");
+      }
+      if (digit === "5") {
+        outputArray.push("V");
+      }
+      break;
+    case ("tens"):
+      console.log("column ", column);
+      break;
+
+}; // SWITCH
+
+
   return outputArray;
-};
-
+}; // ROMAN HARDCODE
 
 
 
