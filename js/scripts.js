@@ -23,7 +23,24 @@ for (var j = 0; j <= (arabicArray.length - 1) ; j++ ) {
     if (digits[i] === arabicArray[j]) {
       // see which column we're on
       console.log("column is ", j);
-    }
+      if ( j === 0 ) {
+        column = "ones";
+        RomanHardcode(digits[i], column);
+      }
+      else if ( j === 1 ) {
+        column = "tens";
+        RomanHardcode(digits[i], column);
+      }
+      else if ( j === 2) {
+        column = "hundreds";
+        RomanHardcode(digits[i], column);
+      }
+      else {
+        column = "thousands";
+        RomanHardcode(digits[i], column);
+      }
+
+    } // COLUMN
 
 }; // FOR LOOP DIGITS
 
@@ -31,6 +48,13 @@ for (var j = 0; j <= (arabicArray.length - 1) ; j++ ) {
 // return result ;
 
 }; // FUNCTION
+
+
+
+var RomanHardcode = function(digit, column){
+  console.log("col ", column, "digit ", digit);
+  return "";
+};
 
 
 
