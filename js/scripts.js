@@ -2,6 +2,7 @@
 
 var translation = function(arabicInput){
 
+var outputArray = [];
 var digits = ["1","2","3","4","5","6","7","8","9"];
 
 // later:  check <4000
@@ -15,20 +16,24 @@ arabicArray.reverse();
 // debugger
 // for all elmts in user input "arabicArray",
 // loop thru digits 1-9,
-digits.forEach(function(digit){
-  // console.log(digit);
-  if (digit === arabicArray[0]){
-    // console.log("yes" , arabicArray[0]);
+for(var i = 0; i <= digits.length; i++){
+  if (digits[i] === arabicArray[0]) {
+    console.log(digits[i]);
+  }
+}
+
+  // what column are we in
+
+
     // do a hard-coded assignment
     // and for R1 in ones column, R=>"I"
     // if R1 = is tens, Rout = "X", "C".
-  }
 
-});
+
+};
 
 // return result;
 
-}
 
 
 
