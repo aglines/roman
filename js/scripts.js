@@ -2,30 +2,29 @@
 
 var translation = function(arabicInput){
 
+var digits = ["1","2","3","4","5","6","7","8","9"];
+
 // later:  check <4000
 // later: check actual number input
 
-// arabicNumber is a string
+// arabicInput is a string
 // split it into an array to loop over
 arabicArray = arabicInput.split("");
 // reverse array so we process ones first
 arabicArray.reverse();
-// for all elmts in  arabicArray,
-arabicArray.forEach(function(oneThruNine)
+// debugger
+// for all elmts in user input "arabicArray",
+// loop thru digits 1-9,
+digits.forEach(function(digit){
+  // console.log(digit);
+  if (digit === arabicArray[0]){
+    // console.log("yes" , arabicArray[0]);
+    // do a hard-coded assignment
+    // and for R1 in ones column, R=>"I"
+    // if R1 = is tens, Rout = "X", "C".
+  }
 
-// last index in array = "ones" *(always)
-// next to last = tens, etc
-
-// for Engnumbers 1-9,
-// if 1 -> R1
-  // and for R1 in ones column, R=>"I"
-  // if R1 = is tens, Rout = "X", "C".
-
-  // all hard corded
-
-
-
-
+});
 
 // return result;
 
