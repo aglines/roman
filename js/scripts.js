@@ -1,8 +1,8 @@
 // BACK END LOGIC
+var outputArray = [];
 
 var translation = function(arabicInput){
 var i = 0;
-var outputArray = [];
 var digits = ["1","2","3","4","5","6","7","8","9"];
 // debugger
 
@@ -22,7 +22,7 @@ for (var j = 0; j <= (arabicArray.length - 1) ; j++ ) {
     // when digit lands on the user input digit,
     if (digits[i] === arabicArray[j]) {
       // see which column we're on
-      console.log("column is ", j);
+      // console.log("column is ", j);
       if ( j === 0 ) {
         column = "ones";
         RomanHardcode(digits[i], column);
@@ -45,15 +45,25 @@ for (var j = 0; j <= (arabicArray.length - 1) ; j++ ) {
 }; // FOR LOOP DIGITS
 
 }; //  ARABIC ARRAY LOOPs
-// return result ;
+ return outputArray ;
 
 }; // FUNCTION
 
 
-
 var RomanHardcode = function(digit, column){
   console.log("col ", column, "digit ", digit);
-  return "";
+  // change this line later
+  if (digit === "1") {
+    outputArray.push("I");
+    console.log(column, "out: ", outputArray);
+  }
+  if (digit === "5") {
+    outputArray.push("V");
+    console.log(column, "out: ", outputArray);
+
+  }
+  console.log(outputArray);
+  return outputArray;
 };
 
 
@@ -66,7 +76,6 @@ $(document).ready(function(){
   var userNumber = $("#input").val();
 
   var output = translation(userNumber);
-
-  $("#output").show();
+  $("#output").append(outputArray);
   });
 });
